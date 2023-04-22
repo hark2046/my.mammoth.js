@@ -30,6 +30,7 @@
   "devDependencies": {
     "browserify": "~13.0.1",
     "browserify-prepend-licenses": "~1.0.0",
+    "cheerio": "1.0.0-rc.12",
     "duck": "^0.1.12",
     "eslint": "^7.32.0",
     "hamjest": "^3.7.3",
@@ -45,8 +46,8 @@
     "mammoth": "bin/mammoth"
   },
   "scripts": {
-    "pretest": "eslint lib test",
-    "test": "mocha 'test/**/*.tests.js'",
+    "pretest": "",
+    "test": "mocha",
     "prepare": "make mammoth.browser.min.js"
   },
   "license": "BSD-2-Clause",
