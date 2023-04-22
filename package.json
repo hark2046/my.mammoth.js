@@ -46,9 +46,7 @@
     "mammoth": "bin/mammoth"
   },
   "scripts": {
-    "pretest": "",
-    "test": "mocha",
-    "prepare": "make mammoth.browser.min.js"
+    "test": "mocha"
   },
   "license": "BSD-2-Clause",
   "volta": {
