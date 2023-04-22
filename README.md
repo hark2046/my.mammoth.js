@@ -1,3 +1,10 @@
+### 更新内容
+
+------
+
+1. 支持将ffData里的数据导出
+2. 支持将word导出json
+
 # Mammoth .docx to HTML converter
 
 Mammoth is designed to convert .docx documents,
