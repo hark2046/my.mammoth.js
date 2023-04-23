@@ -56,31 +56,25 @@ function readXmlElementValue(element, options) {
     return result.value;
 }
 
-function expandElement(element){
-    console.log(element);
-    if(element.children && element.children.length > 0){
-        element.children.forEach(e => expandElement(e));
-    }
-}
 // test('读取word并转化文件为xml', async() => {
-//     const wordDocxPath = path.join(__dirname, "test-data/w_word.docx");
+//     const wordDocxPath = path.join(__dirname, "test-data/w_word2.docx");
 //     const zip1 = await unzip.openZip({path: wordDocxPath})
 //     const wordContentB = await zip1.read('word/document.xml')
-//     const wordContent = wordContentB.toString('utf-8');
+//     // const wordContent = wordContentB.toString('utf-8');
 //
-//     const wpsDocxPath = path.join(__dirname, "test-data/w_wps.docx");
-//     const zip2 = await unzip.openZip({path: wpsDocxPath})
-//     const wpsContentB = await zip2.read('word/document.xml')
-//     const wpsContent = wpsContentB.toString('utf-8');
+//     // const wpsDocxPath = path.join(__dirname, "test-data/w_wps.docx");
+//     // const zip2 = await unzip.openZip({path: wpsDocxPath})
+//     // const wpsContentB = await zip2.read('word/document.xml')
+//     // const wpsContent = wpsContentB.toString('utf-8');
 //     //
-//     // const filepath = path.join(__dirname, "test-data/w_word.xml");
-//     // fs.writeFileSync(filepath, wpsContentB, {encoding: 'binary'})
+//     const filepath = path.join(__dirname, "test-data/w_word2.xml");
+//     fs.writeFileSync(filepath, wordContentB, {encoding: 'binary'})
 //
-//     assert.equal(wordContent, wpsContent)
+//     // assert.equal(wordContent, wpsContent)
 // })
 //
 test('word和wps文件转换结果相同', async function() {
-    const wordDocxPath = path.join(__dirname, "test-data/w_word.docx");
+    const wordDocxPath = path.join(__dirname, "test-data/w_word2.docx");
     const result1 = await mammoth.convertToHtml({path: wordDocxPath});
     const $ = cheerio.load(result1.value);
     const elements = $('FormField');
